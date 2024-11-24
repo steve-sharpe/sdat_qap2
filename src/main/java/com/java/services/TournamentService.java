@@ -30,6 +30,7 @@ public class TournamentService {
         tournamentRepository.save(tournament);
     }
 
+
     public Optional<Tournament> getTournamentById(Long id) {
         return tournamentRepository.findById(id);
     }

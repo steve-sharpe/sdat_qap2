@@ -29,6 +29,10 @@ public class MemberService {
         return memberRepository.save(member);
     }
 
+    public void saveAll(List<Member> members) {
+        memberRepository.saveAll(members);
+    }
+
     public Optional<Member> getMemberById(Long id) {
         return memberRepository.findById(id);
     }

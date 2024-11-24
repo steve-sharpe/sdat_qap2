@@ -1,6 +1,7 @@
 // src/main/java/com/java/entities/Member.java
 package com.java.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import java.time.LocalDate;
 
@@ -22,6 +23,7 @@ public class Member {
 
     @ManyToOne
     @JoinColumn(name = "tournament_id")
+    @JsonBackReference
     private Tournament tournament;
 
     // Getters and setters

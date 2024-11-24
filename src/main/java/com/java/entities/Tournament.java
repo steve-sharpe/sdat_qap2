@@ -1,6 +1,7 @@
 // src/main/java/com/java/entities/Tournament.java
 package com.java.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
@@ -18,6 +19,7 @@ public class Tournament {
     private double cashPrizeAmount;
 
     @OneToMany(mappedBy = "tournament", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonManagedReference
     private Set<Member> members;
 
     // Getters and setters
